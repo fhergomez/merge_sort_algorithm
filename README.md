@@ -1,2 +1,2 @@
-# merge_sort_algorithm
-Merge sort Algorithm Ascending and Descending
+# selection_sort_algorithm
+Selection sort Algorithm Ascending and Descending
