@@ -16,16 +16,20 @@ var persons = [
 function selectionSortObjects (arr){
   var length = arr.length;
   for(var i = 0; i < length; i++){
-    var min = [i].age;
+    var min = {
+      value: arr[i],
+      index: [i]
+    }
     for(var j = i+1; j < length; j++) {
-      if(arr [j].age > arr[min]){
-        min = [j].age;
+      if(arr[j].age < min.value.age){
+        min.value = arr[j];
+        min.index = j;
       }
     }
-    if (min != i.age) {
-      var k = arr[i].age;
-      arr[i].age = arr[min];
-      arr[min] = k;
+    if (min.value != arr[i]) {
+      var k = arr[i];
+      arr[i].age = min.value;
+      arr[min.index] = k;
     }
   }
   return arr;
